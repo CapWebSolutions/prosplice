@@ -4,7 +4,7 @@
  *
  * This file registers any custom metaboxes
  *
- * @package      ProSplice Core_Functionality
+ * @package      ProSplice Core Functionality
  * @since        1.0.0
  * @link         https://github.com/capwebsolutions/prosplice-core-functionality
  * @author       Matt Ryan <matt@capwebsolutions.com>

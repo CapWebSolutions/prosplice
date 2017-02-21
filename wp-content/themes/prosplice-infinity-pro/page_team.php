@@ -47,7 +47,7 @@ function infinity_team_loop() {
 		'order'          => 'ASC',
 		'orderby'        => 'menu_order',
 		'post_type'      => 'page',
-		'posts_per_page' => 4,
+		'posts_per_page' => 2,
 		'paged'          => get_query_var( 'paged' ),
 	);
 
@@ -93,7 +93,7 @@ function infinity_page_team_image() {
 
 	$image = genesis_get_image( array(
 		'format' => 'html',
-		'size'   => 'team-member',
+		'size'   => 'team-member-small',
 		'attr'   => array ( 'alt' => the_title_attribute( 'echo=0' ) ),
 	) );
 
@@ -116,7 +116,7 @@ function infinity_team_title() {
 
 }
 
-// Add one-fourth class to the page team entry.
+// Add appropriate column class to the page team entry.
 function infinity_team_class( $classes ) {
 
 	global $wp_query;

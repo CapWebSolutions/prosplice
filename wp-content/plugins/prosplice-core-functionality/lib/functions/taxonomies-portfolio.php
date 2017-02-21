@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Portfolio Template for Taxonomies
  * 

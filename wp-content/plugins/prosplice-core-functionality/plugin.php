@@ -3,7 +3,7 @@
  * Plugin Name: ProSplice Core Functionality
  * Plugin URI: 
  * Description: This contains all this site's core functionality so that it is theme independent. Customized for www.example.dev
- * @package      ProSplice Core_Functionality
+ * @package      ProSplice Core Functionality
  * @since        1.0.0
  * @link         https://github.com/capwebsolutions/prosplice-core-functionality
  * @author       Matt Ryan <matt@capwebsolutions.com>

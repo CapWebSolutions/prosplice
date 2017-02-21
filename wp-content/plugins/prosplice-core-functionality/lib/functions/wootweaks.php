@@ -4,7 +4,7 @@
  *
  * This file includes any custom WooCommerce tweaks
  *
- * @package      ProSplice Core_Functionality
+ * @package      ProSplice Core Functionality
  * @since        1.0.0
  * @link         https://github.com/capwebsolutions/prosplice-core-functionality
  * @author       Matt Ryan <matt@capwebsolutions.com>

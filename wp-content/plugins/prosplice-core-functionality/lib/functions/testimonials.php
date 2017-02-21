@@ -1,5 +1,17 @@
 <?php
 
+/**
+ * Testimonials 
+ *
+ * This file registers CPT fields groups
+ *
+ * @package      ProSplice Core Functionality
+ * @since        1.0.0
+ * @link         https://github.com/capwebsolutions/prosplice-core-functionality
+ * @author       Matt Ryan <matt@capwebsolutions.com>
+ * @copyright    Copyright (c) 2017, Matt Ryan
+ * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
+ */
 add_action( 'genesis_before_loop', 'trs_testimonial_repeater_page' );
 
 function trs_testimonial_repeater_page () {

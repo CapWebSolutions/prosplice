@@ -4,10 +4,10 @@
  *
  * This file registers any custom post type taxonomies needed
  *
- * @package      Core_Functionality
+ * @package      ProSplice Core Functionality
  * @since        1.0.0
- * @link         https://github.com/capwebsolutions/core-functionality
- * @author       Matt Ryan
+ * @link         https://github.com/capwebsolutions/prosplice-core-functionality
+ * @author       Matt Ryan <matt@capwebsolutions.com>
  * @copyright    Copyright (c) 2017, Matt Ryan
  * @license      http://opensource.org/licenses/gpl-2.0.php GNU Public License
  */
