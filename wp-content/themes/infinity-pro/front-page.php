@@ -18,7 +18,7 @@ add_action( 'genesis_meta', 'infinity_front_page_genesis_meta' );
  */
 function infinity_front_page_genesis_meta() {
 
-	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) ) {
+	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) || is_active_sidebar( 'front-page-8' ) ) {
 
 		// Enqueue scripts.
 		add_action( 'wp_enqueue_scripts', 'infinity_enqueue_front_script_styles', 1 );
@@ -78,7 +78,7 @@ function infinity_front_page_widgets() {
 		'before' => '<div id="front-page-3" class="front-page-3"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-3' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
 	) );
-//* Changedsection 4  from solid to iamge section to show service tech view. 
+
 	genesis_widget_area( 'front-page-4', array(
 		'before' => '<div id="front-page-4" class="front-page-4"><div class="solid-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-4' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
@@ -106,13 +106,13 @@ function infinity_front_page_widgets() {
 	// Remove team-member class.
 	remove_filter( 'genesis_attr_entry', 'infinity_widget_entry_open' );
 
-	genesis_widget_area( 'front-page-before-7', array(
-		'before' => '<div id="front-page-before-7" class="front-page-before-7"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-before-7' ) . '"><div class="wrap">',
+	genesis_widget_area( 'front-page-7', array(
+		'before' => '<div id="front-page-7" class="front-page-7"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-7' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
 	) );
 
-	genesis_widget_area( 'front-page-7', array(
-		'before' => '<div id="front-page-7" class="front-page-7"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-7' ) . '"><div class="wrap">',
+	genesis_widget_area( 'front-page-8', array(
+		'before' => '<div id="front-page-8" class="front-page-8"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-8' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
 	) );
 

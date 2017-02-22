@@ -155,24 +155,6 @@ add_action( 'genesis_header', 'genesis_do_nav', 12 );
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 add_action( 'genesis_footer', 'genesis_do_subnav', 5 );
 
-// Add offscreen content if active.
-add_action( 'genesis_before_header', 'infinity_offscreen_content_output' );
-function infinity_offscreen_content_output() {
-
-	$button = '<button class="offscreen-content-toggle"><i class="icon ion-ios-close-empty"></i> <span class="screen-reader-text">' . __( 'Hide Offscreen Content', 'infinity-pro' ) . '</span></button>';
-
-	if ( is_active_sidebar( 'offscreen-content' ) ) {
-
-		echo '<div class="offscreen-content-icon"><button class="offscreen-content-toggle"><i class="icon ion-ios-more"></i> <span class="screen-reader-text">' . __( 'Show Offscreen Content', 'infinity-pro' ) . '</span></button></div>';
-
-	}
-
-	genesis_widget_area( 'offscreen-content', array(
-		'before' => '<div class="offscreen-content"><div class="offscreen-container"><div class="widget-area">' . $button . '<div class="wrap">',
-		'after'  => '</div></div></div></div>',
-	));
-
-}
 
 // Reduce secondary navigation menu to one level depth.
 add_filter( 'wp_nav_menu_args', 'infinity_secondary_menu_args' );
@@ -273,24 +255,14 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the front page 6 section.', 'infinity-pro' ),
 ) );
 genesis_register_sidebar( array(
-	'id'          => 'front-page-before-7',
-	'name'        => __( 'Front Page Before 7', 'infinity-pro' ),
-	'description' => __( 'This is the front page before 7 section.', 'infinity-pro' ),
-) );
-genesis_register_sidebar( array(
 	'id'          => 'front-page-7',
 	'name'        => __( 'Front Page 7', 'infinity-pro' ),
 	'description' => __( 'This is the front page 7 section.', 'infinity-pro' ),
 ) );
 genesis_register_sidebar( array(
-	'id'          => 'lead-capture',
-	'name'        => __( 'Lead Capture', 'infinity-pro' ),
-	'description' => __( 'This is the lead capture section.', 'infinity-pro' ),
-) );
-genesis_register_sidebar( array(
-	'id'          => 'offscreen-content',
-	'name'        => __( 'Offscreen Content', 'infinity-pro' ),
-	'description' => __( 'This is the offscreen content section.', 'infinity-pro' ),
+	'id'          => 'front-page-8',
+	'name'        => __( 'Front Page 8', 'infinity-pro' ),
+	'description' => __( 'This is the front page 8 section.', 'infinity-pro' ),
 ) );
 
 

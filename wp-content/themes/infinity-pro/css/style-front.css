@@ -60,7 +60,7 @@ Loaded on the front page */
 .front-page .offscreen-content-icon button:focus,
 .front-page .white .genesis-nav-menu a:hover,
 .front-page .white .genesis-nav-menu a:focus {
-	color: #d43c67;
+	color: #fff;
 }
 
 .front-page.full-width-content .content {
@@ -88,8 +88,8 @@ Loaded on the front page */
 .front-page-1,
 .front-page-3,
 .front-page-5,
-.front-page-7,
-.front-page-before-7 {
+.front-page-8,
+.front-page-7 {
 	background-position: center center;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -102,8 +102,8 @@ Loaded on the front page */
 .front-page-4,
 .front-page-5,
 .front-page-6,
-.front-page-7,
-.front-page-before-7 {
+.front-page-8,
+.front-page-7 {
 	border-top: 73px solid transparent;
 	margin-top: -73px;
 	-webkit-background-clip: padding-box;
@@ -119,8 +119,8 @@ Loaded on the front page */
 .front-page-4 .wrap,
 .front-page-5 .wrap,
 .front-page-6 .wrap,
-.front-page-7 .wrap,
-.front-page-before-7 .wrap {
+.front-page-8 .wrap,
+.front-page-7 .wrap {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1280px;
@@ -133,8 +133,8 @@ Loaded on the front page */
 .front-page-4 .widget-title,
 .front-page-5 .widget-title,
 .front-page-6 .widget-title,
-.front-page-7 .widget-title,
-.front-page-before-7 .widget-title {
+.front-page-8 .widget-title,
+.front-page-7 .widget-title {
 	font-family: 'Cormorant Garamond', serif;
 	font-size: 48px;
 	font-size: 4.8rem;
@@ -520,77 +520,6 @@ Loaded on the front page */
 }
 
 
-/* Front Page Before 7
----------------------------------------------------------------------------------------------------- */
-
-.front-page-before-7 {
-	background-color: #666;
-	color: #fff;
-	padding-bottom: 180px;
-	padding-top: 170px;
-	text-align: center;
-}
-
-.front-page-before-7 .widget-full .wrap {
-	max-width: 960px;
-}
-
-.front-page-before-7,
-.front-page-before-7 a,
-.front-page-before-7 p,
-.front-page-before-7 .featured-content .entry-title a,
-.front-page-before-7 .widget-title {
-	color: #fff;
-}
-
-.front-page-before-7 a {
-	border-bottom: 1px solid #fff;
-}
-
-.front-page-before-7 a:hover,
-.front-page-before-7 a:focus,
-.front-page-before-7 .featured-content .entry-meta a:hover,
-.front-page-before-7 .featured-content .entry-meta a:focus,
-.front-page-before-7 .featured-content .entry-title a:hover,
-.front-page-before-7 .featured-content .entry-title a:focus {
-	color: #ccc;
-}
-
-.front-page-before-7 a:hover,
-.front-page-before-7 a:focus {
-	border-bottom: 1px solid #ccc;
-}
-
-.front-page-before-7 a.button,
-.front-page-before-7 .featured-content .entry-header::after {
-	border-bottom: none;
-}
-
-.front-page-before-7 p {
-	font-size: 30px;
-	font-size: 3rem;
-	line-height: 1.75;
-}
-
-.front-page-before-7 p:last-child {
-	margin-bottom: 0;
-}
-
-.front-page-before-7 button:focus,
-.front-page-before-7 button:hover,
-.front-page-before-7 input:focus[type="button"],
-.front-page-before-7 input:hover[type="button"],
-.front-page-before-7 input:focus[type="reset"],
-.front-page-before-7 input:hover[type="reset"],
-.front-page-before-7 input:focus[type="submit"],
-.front-page-before-7 input:hover[type="submit"],
-.front-page-before-7 .textwidget a.button:focus,
-.front-page-before-7 .textwidget a.button:hover {
-	background-color: #fff;
-	border: none;
-	color: #000;
-}
-
 /* Front Page 7
 ---------------------------------------------------------------------------------------------------- */
 
@@ -657,6 +586,97 @@ Loaded on the front page */
 .front-page-7 input:hover[type="submit"],
 .front-page-7 .textwidget a.button:focus,
 .front-page-7 .textwidget a.button:hover {
+	background-color: #fff;
+	border: none;
+	color: #000;
+}
+
+/* Front Page 8
+---------------------------------------------------------------------------------------------------- */
+
+/*.myDiv {
+  position: relative;
+  z-index: 5;
+  height: 250px;
+  width: 300px;
+  color: #000;
+  font-size: 400%;
+  padding: 20px;
+}
+
+.myDiv::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(//www.wonderbackgrounds.com/girly/backgrounds/girly_background_02.gif) center center;
+    opacity: .1;
+}*/
+
+
+
+.front-page-8 {
+	/*background-color: #666;*/
+	background-color: rgba(102,102,102,0.5);
+	color: #fff;
+	padding-bottom: 180px;
+	padding-top: 170px;
+	text-align: center;
+}
+
+.front-page-8 .widget-full .wrap {
+	max-width: 960px;
+}
+
+.front-page-8 {
+	margin-top: 5%;
+}
+
+.front-page-8,
+.front-page-8 a,
+.front-page-8 p,
+.front-page-8 .featured-content .entry-title a,
+.front-page-8 .widget-title {
+	color: #fff;
+}
+
+.front-page-8 a:hover,
+.front-page-8 a:focus,
+.front-page-8 .featured-content .entry-meta a:hover,
+.front-page-8 .featured-content .entry-meta a:focus,
+.front-page-8 .featured-content .entry-title a:hover,
+.front-page-8 .featured-content .entry-title a:focus {
+	color: #ccc;
+}
+
+.front-page-8 a.button,
+.front-page-8 .featured-content .entry-header::after {
+	border-bottom: none;
+}
+
+.front-page-8 p {
+	font-size: 30px;
+	font-size: 3rem;
+	line-height: 1.75;
+}
+
+.front-page-8 p:last-child {
+	margin-bottom: 0;
+}
+
+.front-page-8 button:focus,
+.front-page-8 button:hover,
+.front-page-8 input:focus[type="button"],
+.front-page-8 input:hover[type="button"],
+.front-page-8 input:focus[type="reset"],
+.front-page-8 input:hover[type="reset"],
+.front-page-8 input:focus[type="submit"],
+.front-page-8 input:hover[type="submit"],
+.front-page-8 .textwidget a.button:focus,
+.front-page-8 .textwidget a.button:hover {
 	background-color: #fff;
 	border: none;
 	color: #000;
@@ -906,7 +926,8 @@ Loaded on the front page */
 	.front-page-4,
 	.front-page-5,
 	.front-page-6,
-	.front-page-7 {
+	.front-page-7,
+	.front-page-8 {
 		padding-bottom: 150px;
 		padding-top: 150px;
 	}
@@ -924,7 +945,8 @@ Loaded on the front page */
 	.front-page-4 .wrap,
 	.front-page-5 .wrap,
 	.front-page-6 .wrap,
-	.front-page-7 .wrap {
+	.front-page-7 .wrap,
+	.front-page-8 .wrap {
 		padding-left: 5%;
 		padding-right: 5%
 	}
@@ -979,7 +1001,8 @@ Loaded on the front page */
 	.front-page-4,
 	.front-page-5,
 	.front-page-6,
-	.front-page-7 {
+	.front-page-7,
+	.front-page-8 {
 		padding-bottom: 100px;
 		padding-top: 100px;
 	}
@@ -989,7 +1012,8 @@ Loaded on the front page */
 	.front-page-4 p,
 	.front-page-5 p,
 	.front-page-6 p,
-	.front-page-7 p {
+	.front-page-7 p,
+	.front-page-8 p {
 		font-size: 24px;
 		font-size: 2.4rem;
 		line-height: 1.75;

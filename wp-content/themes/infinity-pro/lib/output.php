@@ -23,7 +23,7 @@ function infinity_css() {
 
 	$color_accent = get_theme_mod( 'infinity_accent_color', infinity_customizer_get_default_accent_color() );
 
-	$opts = apply_filters( 'infinity_images', array( '1', '3', '5', '7' ) );
+	$opts = apply_filters( 'infinity_images', array( '1', '3', '5', '7', '8' ) );
 
 	$settings = array();
 
@@ -37,9 +37,10 @@ function infinity_css() {
 
 		$background = $value['image'] ? sprintf( 'background-image: url(%s);', $value['image'] ) : '';
 
-		if ( is_front_page() ) {
+		if ( is_front_page() && !(8 == $section) ) {
 			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s { %s }', $section, $background ) : '';
-			// $css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s { %s opacity:0.5;}', $section, $background ) : '';
+		} elseif ( is_front_page() && (8 == $section) ) {
+			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s {z-index:-1; %s }', $section, $background ) : '';
 		}
 
 	}
@@ -86,7 +87,7 @@ function infinity_css() {
 		.front-page-3 a.button,
 		.front-page-5 a.button,
 		.front-page-7 a.button,
-		.front-page-before-7 a.button,
+		.front-page-8 a.button,
 		.footer-widgets .button:hover {
 			background-color: %1$s;
 			color: %2$s;
