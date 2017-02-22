@@ -115,7 +115,6 @@ function infinity_front_page_widgets() {
 		'before' => '<div id="front-page-8" class="front-page-8"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-8' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
 	) );
-
 }
 
 // Modify the entry title text.

@@ -616,6 +616,9 @@ Loaded on the front page */
     opacity: .1;
 }*/
 
+div.opacity30 {
+  opacity: 0.3;
+}
 
 
 .front-page-8 {
@@ -682,6 +685,14 @@ Loaded on the front page */
 	color: #000;
 }
 
+#oval8 {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(6, 40, 102, 0.58);
+	-moz-border-radius: 200px / 200px;
+	-webkit-border-radius: 200px / 200px;
+    border-radius: 200px / 200px;
+}
 
 /* Flexible Widgets
 ---------------------------------------------------------------------------------------------------- */
