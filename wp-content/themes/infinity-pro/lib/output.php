@@ -34,15 +34,10 @@ function infinity_css() {
 	$css = '';
 
 	foreach ( $settings as $section => $value ) {
-
 		$background = $value['image'] ? sprintf( 'background-image: url(%s);', $value['image'] ) : '';
-
-		if ( is_front_page() && !(8 == $section) ) {
+		if ( is_front_page() ) {
 			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s { %s }', $section, $background ) : '';
-		} elseif ( is_front_page() && (8 == $section) ) {
-			$css .= ( ! empty( $section ) && ! empty( $background ) ) ? sprintf( '.front-page-%s {z-index:-1; %s }', $section, $background ) : '';
-		}
-
+		} 
 	}
 
 	$css .= ( infinity_customizer_get_default_accent_color() !== $color_accent ) ? sprintf( '
