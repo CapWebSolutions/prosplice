@@ -62,4 +62,3 @@ function cptui_register_my_taxes() {
 
 // End cptui_register_my_taxes()
 }
-

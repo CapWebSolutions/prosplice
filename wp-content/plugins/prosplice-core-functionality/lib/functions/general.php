@@ -56,9 +56,12 @@ function cws_hide_editor_and_tools() {
  * See the commented list of menu items for reference.
  *
  */
-function be_remove_menus () {
+function prosplice_remove_menus () {
 	global $menu;
 	$restricted = array(__('Links'), __('Comments'));
+	if ( !current_user_can( 'update_core' ) ) {
+		$restricted = array(__('Links'), __('Comments'), __('Tools') );   // Add tools menu to no-show list for non-admins
+	}
 	// Example:
 	//$restricted = array(__('Dashboard'), __('Posts'), __('Media'), __('Links'), __('Pages'), __('Appearance'), __('Tools'), __('Users'), __('Settings'), __('Comments'), __('Plugins'));
 	end ($menu);
@@ -67,7 +70,7 @@ function be_remove_menus () {
 		if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){unset($menu[key($menu)]);}
 	}
 }
-add_action( 'admin_menu', 'be_remove_menus' );
+add_action( 'admin_menu', 'prosplice_remove_menus' );
 
 /**
  * Customize Admin Bar Items
