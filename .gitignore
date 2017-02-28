@@ -134,5 +134,4 @@ Thumbs.db
 # track these mu-plugins, plugins, and themes
 # add your own entries here
 !wp-content/plugins/prosplice-core-functionality/
-!wp-content/themes/prosplice-infinity-pro/
-!wp-content/themes/infinity-pro/
+!wp-content/themes/prosplice-infinity/
