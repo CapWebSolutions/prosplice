@@ -1,6 +1,6 @@
 <?php
 /**
- * ProSplice Infinity.
+ * Infinity Pro.
  *
  * This file adds the Customizer additions to the Infinity Pro Theme.
  *

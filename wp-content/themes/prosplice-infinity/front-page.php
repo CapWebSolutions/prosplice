@@ -1,6 +1,6 @@
 <?php
 /**
- * ProSplice Infinity.
+ * Infinity Pro.
  *
  * This file adds the front page to the Infinity Pro Theme.
  *

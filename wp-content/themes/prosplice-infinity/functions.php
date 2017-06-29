@@ -55,6 +55,9 @@ function prosplice_infinity_enqueue_scripts_styles() {
 	wp_enqueue_script( 'prosplice-infinity-match-height', get_stylesheet_directory_uri() . '/js/match-height.js', array( 'jquery' ), '0.5.2', true );
 	wp_enqueue_script( 'prosplice-infinity-global', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery', 'infinity-match-height' ), '1.0.0', true );
 
+// Use these for phone icon in top nav
+	wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null );
+
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 	wp_enqueue_script( 'prosplice-infinity-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menus' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 	wp_localize_script(
@@ -285,3 +288,21 @@ function be_portfolio_template( $template ) {
   return $template;
 }
 add_filter( 'template_include', 'be_portfolio_template' );
+
+/**
+ * Add a phone icon with phone number to primary & secondary nav
+ * 
+ */
+add_filter( 'wp_nav_menu_items', 'cws_phone_info', 10, 2 );
+function cws_phone_info( $menu, $args ) {
+
+	$args = (array)$args;
+	$phone = "845-235-2115";
+	if ( empty( $phone ) ) {
+		return $menu;
+	}
+
+	$menu_right  = '<li class="phone menu-item last"><a href="tel:' . strip_tags( $phone ) . '">' . '<i class="material-icons">phone_in_talk</i>' . strip_tags( $phone ) . '</a></li>';
+	return $menu . $menu_right;
+
+}
