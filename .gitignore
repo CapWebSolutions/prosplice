@@ -135,3 +135,4 @@ Thumbs.db
 # add your own entries here
 !wp-content/plugins/prosplice-core-functionality/
 !wp-content/themes/prosplice-infinity/
+!wp-content/themes/prosplice-inifinity/
