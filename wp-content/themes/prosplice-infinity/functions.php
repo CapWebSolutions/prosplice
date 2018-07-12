@@ -22,7 +22,7 @@ include_once( get_stylesheet_directory() . '/lib/helper-functions.php' );
 // Include customizer CSS.
 include_once( get_stylesheet_directory() . '/lib/output.php' );
 
-// Add image upload and color select to theme customizer.
+// Add image upload and color select to theme customizer. 
 require_once( get_stylesheet_directory() . '/lib/customize.php' );
 
 // Add the required WooCommerce functions.
@@ -43,7 +43,7 @@ function prosplice_infinity_localization_setup(){
 // Child theme (do not remove).
 define( 'CHILD_THEME_NAME', 'ProSplice Infinity' );
 define( 'CHILD_THEME_URL', 'http://github.com/capwebsolutions/prosplice/' );
-define( 'CHILD_THEME_VERSION', '1.0.2' );
+define( 'CHILD_THEME_VERSION', '1.0.3' );
 
 // Enqueue scripts and styles.
 add_action( 'wp_enqueue_scripts', 'prosplice_infinity_enqueue_scripts_styles' );
@@ -53,23 +53,19 @@ function prosplice_infinity_enqueue_scripts_styles() {
 	wp_enqueue_style( 'prosplice-infinity-ionicons', '//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_script( 'prosplice-infinity-match-height', get_stylesheet_directory_uri() . '/js/match-height.js', array( 'jquery' ), '0.5.2', true );
-	wp_enqueue_script( 'prosplice-infinity-global', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery', 'infinity-match-height' ), '1.0.0', true );
+	wp_enqueue_script( 'prosplice-infinity-global', get_stylesheet_directory_uri() . '/js/global.js', array( 'jquery' ), '1.0.0', true );
 
 // Use these for phone icon in top nav
 	wp_enqueue_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', array(), null );
 
 	$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'prosplice-infinity-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menus' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
-	wp_localize_script(
-		'infinity-responsive-menu',
-		'genesis_responsive_menu',
-		prosplice_infinity_responsive_menu_settings()
-	);
+	wp_enqueue_script( 'infinity-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menus' . $suffix . '.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_localize_script( 'infinity-responsive-menu', 'genesis_responsive_menu', infinity_responsive_menu_settings() );
 
 }
 
 // Define our responsive menu settings.
-function prosplice_infinity_responsive_menu_settings() {
+function infinity_responsive_menu_settings() {
 
 	$settings = array(
 		'mainMenu'         => __( 'Menu', 'prosplice-infinity' ),
@@ -173,22 +169,6 @@ function infinity_secondary_menu_args( $args ) {
 
 }
 
-// Modify size of the Gravatar in the author box.
-add_filter( 'genesis_author_box_gravatar_size', 'infinity_author_box_gravatar' );
-function infinity_author_box_gravatar( $size ) {
-	return 100;
-}
-
-// Modify size of the Gravatar in the entry comments.
-add_filter( 'genesis_comment_list_args', 'infinity_comments_gravatar' );
-function infinity_comments_gravatar( $args ) {
-
-	$args['avatar_size'] = 60;
-
-	return $args;
-
-}
-
 // Setup widget counts.
 function infinity_count_widgets( $id ) {
 
@@ -263,6 +243,11 @@ genesis_register_sidebar( array(
 	'description' => __( 'This is the front page 7 section.', 'prosplice-infinity' ),
 ) );
 genesis_register_sidebar( array(
+	'id'          => 'front-page-7a',
+	'name'        => __( 'Front Page 7a', 'prosplice-infinity' ),
+	'description' => __( 'This is the front page 7a section.', 'prosplice-infinity' ),
+) );
+genesis_register_sidebar( array(
 	'id'          => 'front-page-8',
 	'name'        => __( 'Front Page 8', 'prosplice-infinity' ),
 	'description' => __( 'This is the front page 8 section.', 'prosplice-infinity' ),
@@ -297,12 +282,29 @@ add_filter( 'wp_nav_menu_items', 'cws_phone_info', 10, 2 );
 function cws_phone_info( $menu, $args ) {
 
 	$args = (array)$args;
-	$phone = "845-235-2115";
-	if ( empty( $phone ) ) {
-		return $menu;
-	}
+	$phone = "+18452352115";
+	$phone_pretty ="(845)235-2115";
 
-	$menu_right  = '<li class="phone menu-item last"><a href="tel:' . strip_tags( $phone ) . '">' . '<i class="material-icons">phone_in_talk</i>' . strip_tags( $phone ) . '</a></li>';
+	$menu_right_local_start = '<div itemscope itemtype="http://schema.org/LocalBusiness">';
+	$menu_right_local_start .= '<span itemprop="telephone">';
+	$menu_right_local_start .= '<a href="tel:' . $phone . '">';
+	$menu_right_local_end = $phone_pretty . '</a>';
+	$menu_right_local_end .= '</span></div>';
+
+	$menu_right  = '<li class="phone menu-item last">' . $menu_right_local_start . '<i class="material-icons">phone_in_talk</i>' . $menu_right_local_end . '</li>';
 	return $menu . $menu_right;
 
 }
+	// $menu_right  = '<li class="phone menu-item last"><a href="tel:' . strip_tags( $phone ) . '">' . '<i class="material-icons">phone_in_talk</i>' . strip_tags( $phone ) . '</a></li>';
+	// return $menu . $menu_right;
+
+// <div itemscope itemtype="http://schema.org/LocalBusiness">
+//   <h1 itemprop="name">Beach Bunny Swimwear</h1>
+//   Phone: 
+//     <span itemprop="telephone">
+//       <a href="tel:+18506484200">
+//          850-648-4200
+//       </a>
+//     </span>
+// </div>
+

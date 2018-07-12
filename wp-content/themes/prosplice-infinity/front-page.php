@@ -18,7 +18,7 @@ add_action( 'genesis_meta', 'infinity_front_page_genesis_meta' );
  */
 function infinity_front_page_genesis_meta() {
 
-	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) || is_active_sidebar( 'front-page-8' ) ) {
+	if ( is_active_sidebar( 'front-page-1' ) || is_active_sidebar( 'front-page-2' ) || is_active_sidebar( 'front-page-3' ) || is_active_sidebar( 'front-page-4' ) || is_active_sidebar( 'front-page-5' ) || is_active_sidebar( 'front-page-6' ) || is_active_sidebar( 'front-page-7' ) || is_active_sidebar( 'front-page-7a' ) || is_active_sidebar( 'front-page-8' ) ) {
 
 		// Enqueue scripts.
 		add_action( 'wp_enqueue_scripts', 'infinity_enqueue_front_script_styles', 1 );
@@ -111,6 +111,11 @@ function infinity_front_page_widgets() {
 		'after'  => '</div></div></div>',
 	) );
 
+	genesis_widget_area( 'front-page-7a', array(
+		'before' => '<div id="front-page-7a" class="front-page-7a"><div class="solid-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-7a' ) . '"><div class="wrap">',
+		'after'  => '</div></div></div>',
+	) );
+	
 	genesis_widget_area( 'front-page-8', array(
 		'before' => '<div id="front-page-8" class="front-page-8"><div class="image-section flexible-widgets widget-area fadeup-effect' . infinity_widget_area_class( 'front-page-8' ) . '"><div class="wrap">',
 		'after'  => '</div></div></div>',
