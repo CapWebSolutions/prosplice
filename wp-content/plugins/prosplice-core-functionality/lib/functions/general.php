@@ -141,7 +141,7 @@ function cws_sp_footer_creds_filter( $creds ) {
   	$creds = '<center>[footer_copyright Before="Copyright "] &middot; ' . get_bloginfo( $show = 'name', 'raw' );
     $creds .= '<br>&mdash;<br><small>Website by <a ';
     $creds .= "{$rel} ";
-    $creds .= 'href="https://capwebsolutions.com/" target="_blank">Cap Web Solutions</a></small></center>';
+    $creds .= 'href="https://capwebsolutions.com/" target="_blank" rel="nofollow" >Cap Web Solutions</a></small></center>';
     return $creds;
 }
 
@@ -190,3 +190,16 @@ function be_portfolio_query( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'be_portfolio_query' );
+
+
+
+// Add the filter and function, returning the widget title only if the first character is not "!"
+// Author: Stephen Cronin
+// Author URI: http://www.scratch99.com/
+add_filter( 'widget_title', 'remove_widget_title' );
+function remove_widget_title( $widget_title ) {
+	if ( substr ( $widget_title, 0, 1 ) == '!' )
+		return;
+	else 
+		return ( $widget_title );
+}
