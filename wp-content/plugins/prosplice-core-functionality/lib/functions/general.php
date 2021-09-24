@@ -5,7 +5,7 @@
  * This file contains any general functions
  *
  * @package      ProSplice Core Functionality
- * @since        1.0.0
+ * @since        1.1.0
  * @link         https://github.com/capwebsolutions/prosplice-core-functionality
  * @author       Matt Ryan <matt@capwebsolutions.com>
  * @copyright    Copyright (c) 2017, Matt Ryan
@@ -132,17 +132,6 @@ function cws_enqueue_needed_scripts() {
 	// font-awesome
 	// Ref: application of these fonts: https://sridharkatakam.com/using-font-awesome-wordpress/
 	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
-}
-
-//* Change the footer text
-add_filter('genesis_footer_creds_text', 'cws_sp_footer_creds_filter');
-function cws_sp_footer_creds_filter( $creds ) {
-    $rel = is_front_page() ? '' : 'rel="nofollow"';
-  	$creds = '<center>[footer_copyright Before="Copyright "] &middot; ' . get_bloginfo( $show = 'name', 'raw' );
-    $creds .= '<br>&mdash;<br><small>Website by <a ';
-    $creds .= "{$rel} ";
-    $creds .= 'href="https://capwebsolutions.com/" target="_blank" rel="nofollow" >Cap Web Solutions</a></small></center>';
-    return $creds;
 }
 
 // Gravity Forms Specific Stuff =======================================
