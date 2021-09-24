@@ -23,26 +23,5 @@
 // Plugin Directory
 define( 'CWS_DIR', dirname( __FILE__ ) );
 
-// Post Types
-include_once( CWS_DIR . '/lib/functions/post-types.php' );
-
-// Taxonomies
-include_once( CWS_DIR . '/lib/functions/taxonomies.php' );
-
-// Special handling of taxonomy templates
-// include_once( CWS_DIR . '/lib/functions/taxonomies-portfolio.php' );
-
-// Metaboxes
-//include_once( CWS_DIR . '/lib/functions/metaboxes.php' );
-
-// Widgets
-//include_once( CWS_DIR . '/lib/widgets/widget-social.php' );
-
 // General
 include_once( CWS_DIR . '/lib/functions/general.php' );
-
-// Woo tweaks
-// include_once( CWS_DIR . '/lib/functions/wootweaks.php' );
-
-// Testimonials
-include_once( CWS_DIR . '/lib/functions/testimonials.php' );
