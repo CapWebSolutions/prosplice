@@ -4,7 +4,7 @@
  * Plugin URI: 
  * Description: This contains all this site's core functionality so that it is theme independent. Customized for www.example.dev
  * @package      ProSplice Core Functionality
- * @since        1.0.0
+ * @since        1.1.0
  * @link         https://github.com/capwebsolutions/prosplice-core-functionality
  * @author       Matt Ryan <matt@capwebsolutions.com>
  * @copyright    Copyright (c) 2017, Matt Ryan
